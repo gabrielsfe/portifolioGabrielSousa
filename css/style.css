@@ -1,0 +1,118 @@
+html { box-sizing: border-box; font: 10px sans-serif; }
+        body { margin: 0 10px; }
+        h1 { 
+            font-size: 16px;
+            margin: 0 0 16px 0;
+            width: 100%;
+            text-align: center;
+        }
+        ul { 
+            list-style: none;
+            margin: 16px 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        li > b { color: red; font-size: 14px; }
+        button { 
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            color: #fff;
+            background: #369;
+            font-size: 14px; 
+            width: 50%;
+            margin: auto  0 16px auto;
+        }
+        .container {  
+            display: flex; 
+            flex-flow: column;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .produto {  
+            display: flex; 
+            flex-flow: row wrap;
+            justify-content: space-between;
+            border: 1px solid #ccc; 
+            border-radius: 16px;
+            padding: 8px;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 8px;
+            max-width: 28rem;
+            margin: 1rem; 
+        }
+        .produto img {
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .produto img:hover {
+            filter: brightness(0.8);
+        }
+        @media all and (min-width: 560px) {
+            body { margin: 0 auto;}
+            .container { 
+                max-width: 1200px;
+                margin: 0 auto;
+                flex-flow: row wrap; 
+            }
+            .produto { 
+                max-width: 28rem;
+                margin: 1rem; 
+            }
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 35%;
+            max-width: 300px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
